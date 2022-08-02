@@ -1,0 +1,35 @@
+div[data--book-view] {
+  position: relative;
+  overflow: visible;
+
+  &>div, &>div>div {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+  }
+
+  &>div>div {
+    box-shadow: 1px 2px 5px 1px lightgray, inset 0 0 176px 25px burlywood;
+    background: white;
+  }
+
+  &>div {
+    //overflow: hidden;
+    background: transparent;
+    &:nth-child(1) {
+    }
+    &:nth-child(2) {
+
+      &>div {
+        border: 1px solid red;
+        //transform: rotateZ(-30deg) translate(87%, 58%);
+        &:before {
+          content: 'Content';
+        }
+      }
+    }
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
